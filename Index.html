@@ -1,0 +1,26 @@
+<html ng-app="Demo">
+       <title>Translation Filter</title>
+      <head>
+		 <!-- ANGULAR and ANGULAR UI -->
+         <script src="assets/libs/angular-1.2.26/angular.js"></script>
+         
+		 <!-- Bootstrap and bootstrap theme -->
+         <link href="assets/libs/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+		 
+		 <script src="app/controllers/demoController.js"></script>
+         <script src="app/filters/translationFilter.js"></script>
+		 
+      </head>
+      <body ng-controller="DemoController" style="text-align:center">
+            <h1 class="col-md-12">
+				{{ 'WELCOME' | translate }}
+			</h1>
+			<h2 class="col-md-12">
+				{{ 'MESSAGE' | translate }}
+			</h2>
+			<div class="col-md-6 col-md-offset-3" style="margin-top:50px;">
+				<button class="btn-primary col-md-5" ng-click="setLanguage('en')" style="height:40px">{{ 'ENGLISH' | translate }}</button>
+				<button class="btn-success col-md-5 col-md-offset-2" ng-click="setLanguage('pt')" style="height:40px">{{ 'PORTUGUESE' | translate }}</button>
+			</div>
+      </body>
+   </html>
